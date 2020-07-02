@@ -59,6 +59,11 @@ void loop()
   Serial.print(currenttime);
   Serial.println("");  
   delay(1000);
+  
+  //Do it sneaky
+  char DateAndTimeString[20];
+  sprintf(DateAndTimeString, "%4d-%02d-%02d %d:%02d:%02d", dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second);
+  delay(1000);
 }
 
 String getCurrentTime()
